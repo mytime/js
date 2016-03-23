@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>javascript and html</title>
+    <script type="text/javascript" src
+
+    <!--js的第二种用法-->
+    <script type="text/javascript">
+        //        <!--   js 内容  //-->   这写法是告诉浏览器，如果不支持js请跳过，不要报错
+        alert("hello world")
+    </script>
+</head>
+<body>
+
+<!--js的第一种用法-->
+<p onclick="alert('world')" id="p123">点我</p>
+
+</body>
+</html>
+
+<!--操作文档对象模型-->
+<script type="text/javascript">
+    var p = document.getElementById("p");
+    //    输出id = p 的内容
+    alert(p.id);
+</script>

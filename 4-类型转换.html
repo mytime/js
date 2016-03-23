@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script type="text/javascript">
+
+    /**
+     * 1.自负串传number
+     *      a.parseInt,parseFloat
+     *      b.乘以1 （推荐用法）
+     *
+     * 2. 把字符串转Boolean
+     *      true:  非零,"0"
+     *      false: 0, null,undefine,NaN
+     *
+     *
+     */
+
+    var a = "123";
+    a = a*1;// 乘 1 转换类型，不改变值
+//    alert(typeof(a)) //true;
+
+    function func(){
+        //1. 拿到文本框对象
+        var txt = document.getElementById("age").value;
+        //2.判断内容
+        if(txt == 100)
+            alert("等于100");
+        else
+            alert("不等于100");
+    }
+
+</script>
+<body>
+    年龄：<input type="text" name="" id = "age">
+    <input type="button" value="弹出年龄" onclick="func()">
+</body>
+</html>

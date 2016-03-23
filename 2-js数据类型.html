@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script type="text/javascript">
+
+    /**
+     * a. 基本类型
+     *         1.undefined
+     *         2.String
+     *         3.Boolean
+     *         4.Number
+     *         5.function
+     *         6.null
+     * b.引用类型
+     *          Objedt
+     *          判断变量类型方式：
+     *              1.typeof(变量)
+     *              2.instanceof 判断是不是new出来的类型
+     */
+    //.........................................................
+    //判断类型
+
+    var v; //undefined
+    v = 10; //number
+    v="abc"//String
+    v=function(){ // function
+        alert("a")
+    }
+
+//  alet(typeof(v) == "number");
+//  alert(typeof(v));
+
+
+    //.........................................................
+    //instanceof
+
+    b = 10;  //false
+    b = new Number(10); //true
+    alert(b instanceof Number); // 返回类型是Boolean
+
+
+</script>
+<body>
+
+</body>
+</html>

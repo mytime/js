@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我是一个亿万富豪</title>
+</head>
+<body onload="init()">
+    <script type="text/javascript">
+        //示例：标题栏的滚动
+        function init(){
+            var title = document.title; //获取标题文本
+            var arr = title.split("");  //用空字符拆分文本
+            var first = arr.shift(); //删除并返回数组的第一个元素
+            arr.push(first); //向数组的末尾添加一个或更多元素，并返回新的长度
+            title = arr.join(""); //把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+            document.title = title;
+            setTimeout("init()",1000); //1秒执行一次
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script type="text/javascript">
+    /**
+     * 声明方式：    1 . var i = new Array()
+     *               2 . var j = []
+     */
+
+    var arr = new Array();
+    var arr1 = new Array(4); //长度为4的数组
+    var arr2 = new Array(1,2,3,4,5); //数组初始化数据是1 2 3 4 5
+    var arr3 = [1,2,"3",true,2.3,false,"abc"] // 数组内可以是任意类型的值
+//    alert(arr3.length);  // 7
+
+    //改变数组长度
+    arr3.length = 100; // 改变数组的长度
+    arr3[100] = 100; // 取长度为100的数组的第100个下标， return 101
+    arr3.length = 2; //长度缩小为2,其他数据丢弃
+//    alert(arr3[3]); //undifind
+
+    //二维数组
+    var arr4 = ["中国","美国","日本"];
+    arr4["中国"] = ["北京","上海","天津"];
+//    alert(arr4["中国"][0]); // return 北京
+
+    // join 方法
+    alert(arr4.join()); // 默认用逗号隔开内容
+    alert(arr4.join("")); //指定用空字符串隔开内容
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>

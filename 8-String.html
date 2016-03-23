@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script type="text/javascript">
+
+    //文本变大
+    function fun(){
+        var p = document.getElementById("p"); //获得p对象
+        var txt = p.innerHTML; //提取p对象开始和结束标签之间的内容
+        p.innerHTML = txt.big();
+    }
+
+    //文本变色
+    function fun1(){
+        var arr = ["red","blue","green","yellow","#666666"] //颜色数组
+        var p = document.getElementById("p"); //获得p对象
+        var index = Math.floor(Math.random()*arr.length);// Math.floor 取整，Math.random 随机0-1之间，
+        var txt = p.innerText; //提取p对象开始和结束标签之间的文本
+        p.innerHTML = txt.fontcolor(arr[index]);
+        setTimeout("fun1()",500); // 500毫秒执行一次
+    }
+
+
+
+</script>
+<body>
+<p id="p">Hello World</p>
+<input type="button" value="文本变大" onclick="fun()">
+<input type="button" value="文本变色" onclick="fun1()">
+</body>
+</html>
