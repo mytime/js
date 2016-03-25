@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        /**
+         * js 中获得元素的方法
+         *
+         * getElementById（） 获取单个ID，
+         *
+         * document.getElementsByTagName() 获得一类标签
+         */
+
+        //........................元素赋值...........................
+
+        window.onload = function(){  //窗体加载完成后执行
+
+            // 获取id=username的元素
+            var username = document.getElementById("username");
+            username.value = "二球"
+//            alert(username)
+
+            //获取input类型标签，return nodelist节点列表
+            var inputElements = document.getElementsByTagName("input");
+//            alert(inputElements.length) ; //get nodelist lenght ,return 3
+            var email = inputElements[1]; //use index get second input（name = email）,
+            email.value= "erqiu@qq.com"
+//            alert(email);
+
+            var cellphone = inputElements[2]; //通过坐标获取第3个input（name = cellphone）
+            cellphone.value = "10086"
+
+            //..................节点属性................................
+            /**
+             * 元素 	1
+             * 属性 	2
+             * 文本 	3
+             * 注释 	8
+             * 文档 	9
+             */
+
+            var type = document.getElementById("username").nodeType; //get node type
+            alert(type);  //return 1 ,元素
+
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+<input type="text" name="username" id="username"><br/>
+<input type="text" name="email"><br/>
+<input type="text" name="cellphone"><br/>
+
+</body>
+</html>

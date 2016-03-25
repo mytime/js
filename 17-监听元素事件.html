@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        //监听获得焦点事件
+        function _focus() {
+            /**
+             * 获得元素的三种方式
+             *
+             * document.getElementById("username");  //通过id
+             * document.getElementsByName("username")[0]; //通过name ,return nodelist
+             * document.getElementsByTagName("input")[0]; //通过标签，return nodelist
+             */
+
+            var username = document.getElementsByTagName("input")[0];
+            username.value = "";
+        }
+
+        //失去焦点
+        function _blur(){
+            var usernameValue = document.getElementsByTagName("input")[0].value;
+            if(usernameValue == ""){
+                document.getElementById("alertMsg").innerHTML="对不起，用户名不能为空".fontcolor("red");
+            }else{
+                document.getElementById("alertMsg").innerHTML="OK".fontcolor("green");
+            }
+        }
+
+        /**
+         * 实际开发中需要使用ajax 局部属性，把输入的值同步到服务器去判断
+         */
+
+
+
+
+    </script>
+</head>
+<body>
+<input type="text" name="username" id="username"
+       onfocus="_focus();" onblur="_blur();"
+       value="请输入用户名" style="color: green"><span id="alertMsg"></span><br/>
+
+<input type="text" name="email"><br/>
+<input type="text" name="cellphone"><br/>
+<input type="button" value="按钮" onclick="_click();">
+</body>
+</html>

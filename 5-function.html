@@ -8,22 +8,42 @@
     /**
      * 函数定义
      *      1.采用关键字function来定义
-     *      2.采用匿名函数的方式
+     *      2.采用匿名函数的方式 ,主要用于绑定事件
      *      注意：函数名不能同名
+     *            函数默认无返回值，需要加return才有返回值
      */
-    //定义
+
+    //定义函数
     function fun(){
         alert("hello")
     }
-
     //调用
-    fun();
+//    fun();
+
+
+    //定义有返回值的函数
+    function funi(a){
+        return a;
+    }
+
+    var i = funi("abc");
+//    alert(i);
+
 
     //匿名函数demo
     var i = function(){
         alert("这是匿名函数")
     }
-    i();  // 调用匿名函数
+//    i();  // 调用匿名函数
+
+
+    //匿名函数 （不推荐使用）
+    var cc = new Function("a","b","alert(a+b)");
+
+    //匿名函数demo
+    window.onload = function(){
+//        document.write("加载完成")
+    }
 
 </script>
 <body>

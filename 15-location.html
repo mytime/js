@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+    function goToPage(){
+        var isConfirmed = window.confirm("确定要跳转吗");
+        if(isConfirmed){
+            location.href="http://www.baidu.com";
+        }
+    }
+
+
+    </script>
+</head>
+<body>
+
+<!--执行函数跳转-->
+<a href="javascript:void(0)" onclick="goToPage();">调转页面</a>
+
+<hr/>
+<!--直接跳转-->
+<a href="javascript:void(0)" onclick="javascript:location.href='http://www.baidu.com/'">百度</a>
+
+</body>
+</html>

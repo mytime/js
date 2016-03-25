@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+        /**
+         *length 	返回浏览器历史列表中的 URL 数量。
+         *
+         * back()   加载 history 列表中的前一个 URL。
+         *
+         * forward() 	加载 history 列表中的下一个 URL。
+         *
+         * go() 	加载 history 列表中的某个具体页面。
+         */
+
+        alert(history.length);
+
+    </script>
+</head>
+<body>
+<a href="http://www.baidu.com/">百度</a>
+<br/>
+<a href="javascript:history.back();">返回</a>
+<a href="javascript:history.forward();">下一个页面</a>
+<!--与单击两次后退按钮执行的操作一样-->
+<a href="javascript:history.go(-2);">go 车保网</a>
+
+
+</body>
+</html>

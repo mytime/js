@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>66</title>
+
+    <script type="text/javascript">
+
+        function createTable() {
+
+            //获取文本框的数字
+            var rows = document.getElementsByTagName("input")[0].value;
+            var cols = document.getElementsByTagName("input")[1].value;
+//            alert(rows);
+
+            var table = document.createElement("table");
+
+
+            /**
+             * 设置表格属性有两种方法
+             *
+             * 1  table.属性名 = 属性值；
+             *
+             * 2  table.setAttribute("属性名","属性值")；
+             *
+             */
+             //表格属性
+//            table.setAttribute("border","1");
+            table.border = 1;
+            table.setAttribute("align","center");
+            table.setAttribute("width","80%");
+            table.setAttribute("style","background-color:green");
+
+
+            for (var i = 1; i <= rows; i++) {  //行
+                var tableRow = document.createElement("tr");
+                for (var j = 1; j <= cols; j++) { //列
+                    var tableCol = document.createElement('td');
+
+                    var textNode = document.createTextNode(i + "," + j);
+
+                    tableCol.appendChild(textNode);
+                    tableRow.appendChild(tableCol);
+                }
+                table.appendChild(tableRow);
+            }
+
+            document.getElementById("mybody").appendChild(table);
+
+        }
+    </script>
+</head>
+<body id="mybody">
+输入行数：<input type="text" name="rows"><br/>
+输入列数：<input type="text" name="cols"><br/>
+<input type="button" value="创建表格" onclick="createTable();">
+</body>
+</html>

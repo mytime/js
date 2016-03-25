@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        /**
+         * 校验表单
+         */
+        function validateForm(){
+            var username = document.getElementById("username").value;
+            if(username == ""){
+                document.getElementById("username_msg").innerHTML = "<span style='color: red;'>用户名不能为空</span>";
+
+                return false;
+            }else{
+                document.getElementById("username_msg").innerHTML = "";
+            }
+
+            var password = document.getElementById("password").value;
+            if(password == ""){
+                document.getElementById("password_msg").innerHTML = "<span style='color: red;'>密码不能为空</span>";
+
+                return false;
+            }else{
+                document.getElementById("password_msg").innerHTML = "";
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+<h3>登陆页面</h3>
+<!--
+    1 表单提交时，如果action得到Js返回的true,则执行，否则不执行。
+    2 使用方法：return fun();
+-->
+<form action="1.html" onsubmit="return validateForm();">
+    <table>
+        <tr>
+            <td> 用户名：</td>
+            <td><input type="text" name="username" id="username"/></td>
+            <td id="username_msg"></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name="password" id="password"/></td>
+            <td id="password_msg"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="登陆"/></td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+        var cityList;
+        window.onload = function(){
+
+            cityList = new Object();
+            cityList['天津市'] = ['和平区','河西区','南开区'];
+            cityList['江苏省'] = ['南京市','苏州市'];
+            cityList['浙江省']=['杭州市','宁波市'];
+            cityList['福建省']=['福州市','厦门市'];
+            cityList['山东省']=['济南市','青岛市'];
+
+            for(x in cityList){
+//                alert(x);
+                /**
+                 * new Option(x,x)  arg1:用户选择的值，arg2:用户看到的所有值
+                 */
+                document.getElementById("provinceselect").add(new Option(x,x));
+
+            }
+        }
+        function loadcity(){
+            var provinceselect = document.getElementById("provinceselect");
+//            alert(pselect.value);
+
+            var province = provinceselect.value;
+
+            //清楚城市
+            document.getElementById("cityselect").length = 1;
+
+            //获取省份对应的数组
+            var cities = cityList[province];
+//            alert(cities.length);
+
+            for(m in cities){
+
+                //取得city select 添加到option
+                document.getElementById("cityselect").add(new Option(cities[m]),cities[m]);
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+<select name="province" id="provinceselect" onchange="loadcity()">
+    <option value="--请选择省份--">--请选择省份--</option>
+</select>
+
+<select name="city" id="cityselect">
+    <option value="--请选择城市--">--请选择城市--</option>
+</select>
+</body>
+</html>

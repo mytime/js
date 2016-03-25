@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        window.onload = function () {
+            window.setInterval("showTime();","1000");
+        }
+
+        function showTime(){
+            document.getElementById("lv").innerHTML = new Date();
+        }
+
+
+    </script>
+</head>
+<body>
+<div id="lv"></div>
+</body>
+</html>
